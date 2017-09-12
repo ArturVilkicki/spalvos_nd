@@ -1,0 +1,13 @@
+body {
+	background-color: red;
+}
+.sriftas {
+	color: white;
+	font-family: 'Indie Flower', cursive;
+}
+.langelis {
+	border: 1px solid black;
+	float: left;
+	padding: 8px;
+	font-size: 10px;
+}
