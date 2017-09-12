@@ -1,7 +1,16 @@
 <?php
- $color=rand(1,100000);
-$x="#".$color;
-$hex= $x;
+ //$color=rand(1,100000);
+//$x="#".$color;
+//$hex= $x;
+
+function random_color_part() {
+    return str_pad( dechex( mt_rand( 0, 255 ) ), 2, '0', STR_PAD_LEFT);
+}
+
+function random_color() {
+    return random_color_part() . random_color_part() . random_color_part();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +30,7 @@ $hex= $x;
 		<div class="langelis col">
 			<?php
 			for ($i=1; $i <= 10000; $i++) { 
-				echo "<div class='langelis'>" .$i .$hex . "</div>";
+				echo "<div class='langelis'>" .$i .random_color() . "</div>";
 			}
 
 
